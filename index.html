@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href='styles/style.css' />
+    <link rel='stylesheet' href='styles/header.css' />
+    <link rel='stylesheet' href='styles/quees.css' />
+    <link rel='stylesheet' href='styles/calculadora.css' />
+    <link rel='stylesheet' href='styles/footer.css' />
+</head>
+<body>
+    <header class="topheader">
+        <nav class="topnav">
+            <a href="#" class="logo">
+                <img 
+                    height = '50'
+                    width = '50'
+                    src = 'images/logo.png' 
+                    alt = 'perfilSergio'>
+                <div class="top-titulo">
+                    PlusMedicamentum
+                </div>
+            </a>
+
+            <button class="open-menu" aria-label='Abrir menú'>
+                <img height = '30' width = '30' src="images/open.png" alt="abrir">
+            </button>
+
+            <ul class="menu">
+                <button class="close-menu" aria-label='Cerrar menú'>
+                    <img height = '30'width = '30' src="images/close.png" alt="cerrar">
+                </button>
+                <li><a href="#id-quees" >¿QUÉ ES EL IMC?</a></li>
+                <li><a href="#id-calculadora">CALCULADORA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="quees" id='id-quees'>
+        <div class="quees-info">
+            <h1 class='quees-titulo'>¿QUÉ ES EL IMC?</h1>
+            <div class="quees-descripcion">
+                El índice de masa corporal (IMC) es un número 
+                que se calcula con base en el peso y la estatura de la persona.
+                Este indicador se usa para identificar las categorías de 
+                peso que pueden llevar a problemas de salud.
+            </div>
+        </div>
+        <div class="quees-img">
+            <img src='images/perfil.jpg' alt='quees'/>
+        </div>
+    </section>
+
+    <section class="cal" id='id-calculadora'>
+        
+        <section class = 'tab'>
+            <h2 class="tab-titulo">TABLERO DE REFERENCIA</h2>
+            <div class="tab-content">
+                <table class="tablero">
+                    <tr>
+                      <th>Clasificación</th>
+                      <th>IMC</th>
+                      <th>Riesgo</th>
+                    </tr>
+                    <tr>
+                      <td>Normal</td>
+                      <td>18.5 - 24.9</td>
+                      <td>Promedio</td>
+                    </tr>
+                    <tr>
+                      <td>Sobrepeso</td>
+                      <td>25 - 29.9</td>
+                      <td>Aumentado</td>
+                    </tr>
+                    <tr>
+                      <td>Obesidad grado I</td>
+                      <td>30 - 34.9</td>
+                      <td>Moderado</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidad grado II</td>
+                        <td>35 - 39.9</td>
+                        <td>Severo</td>
+                      </tr>
+                    <tr>
+                        <td>Obesidad grado III</td>
+                        <td>Más de 40</td>
+                        <td>Muy Severo</td>
+                    </tr>
+                  </table>
+            </div>
+        </section>
+
+        <section class="calculadora">
+            <h2 class="calculadora-titulo">CALCULADORA</h2>
+            <div class = 'calculadora-content visibilidad'>
+                <form class="form-box">
+                    <!-- animated fadeInUp -->
+                    <label> Talla (mt)</label>
+                    <input type="text" name = 'talla' placeholder="(Ejem: 1.69)" autofocus>
+                    <label> Peso (kg)</label>
+                    <input type="text" name = 'peso'  placeholder="(Ejem: 69)">
+                    <button type="button" class = 'btn-calcular'>
+                        Calcula !
+                    </button>
+                    <div class = 'es-resultado'>
+
+                    </div>
+                    <script src = 'scripts/calcular.js'></script>
+                </form>
+                <!-- <div class = 'calculadora-resultado no-visibilidad'>
+                    <div class="res-cab">
+                        RESULTADO
+                    </div>
+                    <div class="res-content">
+                        <div class="res-talla">ESTATURA: </div>
+                        <div class="res-peso">PESO: </div>
+                        <div class="res-imc">IMC: </div>
+                        <div class="res-cat">CATEGORÍA: </div>
+                        <div class="res-recom">A officia ratione totam eaque iure aut earum tempore, 
+                            quae debitis eveniet id illum corporis unde magni commodi, quas laboriosam?</div>
+                    </div>
+    
+                </div> -->
+            </div>
+            
+        </section>
+
+        <section class="new">
+            <h2 class="new-titulo"></h2>
+            <div class="results">
+
+            </div>
+        </section>
+
+    </section>
+
+    <footer>
+        <div class="footer-net">
+            <div class="net">
+                REDES SOCIALES
+            </div>
+            <ul class = 'net-ul'>
+                <li class = 'fb'>
+                    <img height = '40' width = '40' src="images/facebook.png">
+                </li>
+                <li class = 'linkedin'>
+                    <img height = '40' width = '40' src="images/linkedin.png">
+                </li>
+                <li class="footer-contact">
+                    <img height = '80' width = '90' src="images/whatsapp.png">
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src = 'scripts/main.js'></script>
+
+</body>
+</html>

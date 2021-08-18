@@ -1,0 +1,154 @@
+
+.topheader{
+    box-shadow: 0 4px 5px var(--color-primario);
+    background-color: var(--color-primario);
+    
+    position:sticky;
+    top: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.top-titulo{
+    margin-left: 16px;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-texto);
+}
+
+.logo img{
+    border-radius: 50%;
+}
+
+/* MENU */
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 0 15px;
+}
+
+.menu a{
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 50px;
+    position: relative;
+}
+
+.menu a::after{
+    content: '';
+    background-color: var(--color-secundario);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width:100%;
+    height: 4px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after{
+    opacity: 0.8;
+}
+
+.menu a:hover{
+    color: var(--color-secundario);
+}
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    /* MENU */
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;    /* elementos centrados */
+        background-color: var(--color-primario);
+        height: 100%;
+        overflow-y: auto;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .menu li{
+        padding: 0;
+    }
+
+    .menu a{
+        color: var(--color-texto-inverso);
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .open-menu,
+    .close-menu{
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-menu{
+        align-self: flex-end;
+        padding: 16px
+    }
+
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    /* pal tabulador*/
+    .open-menu:focus:not(:focus-visible),
+    .close-menu:focus:not(:focus-visible){
+        outline: none;
+    }
+
+    /**/
+    .menu a::after{
+        content: none;
+    }
+    
+    .menu a:hover,
+    .menu a.selected{
+        color: var(--color-texto);
+    }
+}
+
+

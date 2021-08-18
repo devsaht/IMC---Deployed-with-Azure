@@ -1,0 +1,22 @@
+:root{
+    --color-tema: rgb(240,237,249);
+    --color-primario: rgb(14, 82, 146);
+    --color-secundario: rgb(201, 104, 14);
+
+    --color-texto: rgb(255,250,252);
+    --color-texto-inverso: rgb(8,4,6);
+
+    --color-seccion: rgb(147,168,210);
+    --color-seccion-hard: rgb(19, 51, 116);
+    --color-seccion-inverso: rgb(206, 98, 48);
+    --color-seccion-inverso-hard: rgb(219, 93, 34);
+    --color-seccion-inverso-suave: rgb(252, 160, 117);
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Grande';
+    background-color: var(--color-tema);
+}
